@@ -20,6 +20,7 @@ export default function Home() {
 
 
 useLayoutEffect(() => {
+ 
   const ctx = gsap.context(() => {
     const tl = gsap.timeline({
       defaults: {
@@ -56,53 +57,59 @@ useLayoutEffect(() => {
   "-=0.7"
 );
 
-    // Navbar links stagger
-tl.fromTo(
-  navLinksRef.current?.children,
-  {
-    autoAlpha: 0,
-    y: 14,
-    filter: "blur(8px)",
-  },
-  {
-    autoAlpha: 1,
-    y: 0,
-    filter: "blur(0px)",
-    duration: 0.85,
-    ease: "power2.out",
-    stagger: {
-      each: 0.12,
-      from: "start",
-      ease: "power2.inOut",
+    // Navbar links staggerconst navLinks = navLinksRef.current?.children;
+const navLinks = navLinksRef.current?.children;
+if (navLinks && navLinks.length) {
+  tl.fromTo(
+    Array.from(navLinks),
+    {
+      autoAlpha: 0,
+      y: 14,
+      filter: "blur(8px)",
     },
-    clearProps: "filter",
-  },
-  "-=0.6"
-);
-
+    {
+      autoAlpha: 1,
+      y: 0,
+      filter: "blur(0px)",
+      duration: 0.85,
+      ease: "power2.out",
+      stagger: {
+        each: 0.12,
+        from: "start",
+        ease: "power2.inOut",
+      },
+      clearProps: "filter",
+    },
+    "-=0.6"
+  );
+}
     // Hero text
-   tl.fromTo(
-  heroRef.current?.children,
-  {
-    autoAlpha: 0,
-    y: 24,
-    filter: "blur(8px)",
-  },
-  {
-    autoAlpha: 1,
-    y: 0,
-    filter: "blur(0px)",
-    duration: 0.9,
-    ease: "power2.out",
-    stagger: {
-      each: 0.14,
-      from: "start",
-      ease: "power1.inOut",
+   const heroChildren = heroRef.current?.children;
+
+if (heroChildren && heroChildren.length) {
+  tl.fromTo(
+    Array.from(heroChildren),
+    {
+      autoAlpha: 0,
+      y: 24,
+      filter: "blur(8px)",
     },
-    clearProps: "filter",
-  },
-  "-=0.25"
-);
+    {
+      autoAlpha: 1,
+      y: 0,
+      filter: "blur(0px)",
+      duration: 0.9,
+      ease: "power2.out",
+      stagger: {
+        each: 0.14,
+        from: "start",
+        ease: "power1.inOut",
+      },
+      clearProps: "filter",
+    },
+    "-=0.25"
+  );
+}
 
 
 
