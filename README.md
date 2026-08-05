@@ -2,6 +2,9 @@
 
 A modern dental SaaS landing page built with **Next.js**, **React**, **Tailwind CSS**, and **GSAP**. Designed with a clean healthcare aesthetic, smooth motion, responsive layouts, and production-ready architecture.
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0d3f0c3a-e4ca-4599-b814-b6f8f991d36b" />
+
+
 ## Overview
 
 Smiley Teeth is a premium landing page template for dental clinics, healthcare startups, and dental software companies. The project focuses on performance, accessibility, and polished user experience while maintaining a scalable component-based structure.
@@ -186,6 +189,6 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Developed by **Your Name**.
+Developed by **@piyushpatelcodes**.
 
 For questions or collaboration opportunities, feel free to get in touch.
