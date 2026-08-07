@@ -153,7 +153,7 @@ export default function Footer() {
   href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+338-D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
   target="_blank"
   rel="noopener noreferrer"
-  className="hidden items-center gap-2 transition hover:text-[#56b5da] sm:flex"
+  className=" items-center gap-2 transition hover:text-[#56b5da] sm:flex"
 >
 
                 <p className="text-sm leading-6 text-white/60">

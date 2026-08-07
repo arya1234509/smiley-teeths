@@ -23,8 +23,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Smiley Teeths",
-  description: "Coded by @piyushpatelcodes",
+  title: "Global Dental",
+  description: "Root Canal & Implant Centre",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

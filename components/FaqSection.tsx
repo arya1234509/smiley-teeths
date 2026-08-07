@@ -214,7 +214,7 @@ return (
       transition-all
       duration-500
       sm:min-h-[420px]
-      lg:min-h-[520px]
+      min-h-[520px]
     "
   >
     {reviews.map((review, index) => (
