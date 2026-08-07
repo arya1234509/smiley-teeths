@@ -6,9 +6,13 @@ import InfoCard from "../components/InfoCard";
 import Socials from "../components/Socials";
 import Image from "next/image";
 import Link from "next/link";
-import { FaTooth, FaChevronDown, FaBars } from "react-icons/fa";
+import { FaTooth, FaChevronDown, FaBars, FaPhoneAlt, FaCalendarAlt, FaClock } from "react-icons/fa";
+import SmileTransformations from "../components/SmileTransformation";
+import MembershipSection from "../components/MembershipSection";
+import ContactHighlight from "@/components/FaqSection";
+import Footer from "@/components/Footer";
 
-const nav = ["HOME", "SERVICES", "DOCTORS", "BLOG", "SHOP", "PAGES"];
+const nav = ["HOME", "SERVICES", "DOCTORS", "BLOG", "CONTACT"];
 
 export default function Home() {
   const landingRef = useRef<HTMLDivElement>(null);
@@ -121,7 +125,7 @@ if (heroChildren && heroChildren.length) {
 return (
     <div
       ref={landingRef}
-      className="relative flex min-h-screen flex-col items-center justify-center bg-zinc-50 dark:bg-transparent"
+      className="relative flex  flex-col items-center justify-center bg-zinc-50 dark:bg-transparent"
     >
       <div ref={bgRef} className="fixed inset-0 -z-10">
         <Image
@@ -144,42 +148,79 @@ return (
               className="flex items-center gap-3"
               aria-label="TruSmile Home"
             >
-              <FaTooth className="text-xl text-white" />
+              <FaTooth className="text-4xl text-white" />
 
               <span className="text-3xl font-semibold tracking-[0.12em] leading-none">
-                TRU<span className="text-[#56b5da]">SMILE</span>
+                GLOBAL <span className="text-[#56b5da]">DENTAL</span>
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <nav
               ref={navLinksRef}
-              className="hidden items-center gap-8 lg:flex"
+              className="hidden items-center gap-8 lg:flex z-50"
               aria-label="Main navigation"
             >
               {nav.map((item, index) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="group flex items-center gap-2 text-[12px] font-semibold tracking-[0.18em] transition hover:text-[#56b5da]"
-                >
-                  {item}
+            <Link
+  key={item}
+  href="#"
+  className="
+    group
+    flex
+    items-center
+    gap-2
+    text-[12px]
+    font-semibold
+    tracking-[0.18em]
+    text-white
+    transition-colors
+    duration-300
+    hover:text-[#56b5da]
+  "
+>
+  {item}
 
-                  {index < nav.length - 1 && (
-                    <FaChevronDown
-                      size={8}
-                      className="opacity-60 transition group-hover:text-[#56b5da]"
-                    />
-                  )}
-                </Link>
+  {index < nav.length - 1 && (
+    <FaChevronDown
+      size={8}
+      className="
+        text-white/60
+        transition-colors
+        duration-300
+        group-hover:text-[#56b5da]
+      "
+    />
+  )}
+</Link>
+
               ))}
 
-              <Link
-                href="#schedule"
-                className="rounded-sm   bg-white px-5 py-3 text-[12px] font-semibold tracking-[0.18em] text-slate-900 shadow-md transition hover:bg-[#56b5da] hover:text-white"
-              >
-                VIEW SCHEDULE
-              </Link>
+           <Link
+  href="#schedule"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    whitespace-nowrap
+    rounded-sm
+    bg-white
+    px-6
+    py-3
+    text-[12px]
+    font-semibold
+    tracking-[0.18em]
+    text-slate-900
+    shadow-md
+    transition
+    duration-300
+    hover:bg-[#56b5da]
+    hover:text-white
+  "
+>
+  VIEW SCHEDULE
+</Link>
+
             </nav>
 
             {/* Mobile Menu Button */}
@@ -196,8 +237,9 @@ return (
 
       {/* Hero content */}
       <div
+      id="Home"
         ref={heroRef}
-        className="relative z-10 flex min-h-screen w-full items-center"
+        className="relative z-5 flex min-h-screen w-full items-center"
       >
         <div className="mx-auto w-full max-w-[1200px] px-5 md:px-10 lg:px-20">
           <div className="text-left  md:mt-0">
@@ -213,31 +255,74 @@ return (
         </div>
       </div>
 
-      {/* info card */}
+      {/* info card 
+      onday –Saturday : 10:30 AM to 1 PM
+5PM to 8PM
+
+Sunday: 10:30 AM to 1 PM*/}
       <div className="bottom-0  grid gap-px overflow-hidden rounded-sm shadow-soft backdrop-blur-sm lg:grid-cols-3">
-        <InfoCard
-          title="Working Hours"
-          subtitle="MON - SAT"
-          value="9am - 8pm"
-          icon={<FaTooth size={22} />}
-        />
+   <InfoCard
+  title="Working Hours"
+  subtitle=""
+  value={
+    <div className="w-full max-w-full space-y-3 text-[14px] font-semibold leading-6 sm:text-[15px]">
+      <div className="flex flex-col gap-1">
+        <span className="text-[10px] uppercase tracking-[0.18em] text-white/60 sm:text-[11px]">
+          Monday - Saturday
+        </span>
+
+        <div className="whitespace-nowrap text-white">
+          <span>10:30 AM - 1:00 PM</span>
+          <span className="mx-2 text-white/40">|</span>
+          <span>5:00 PM - 8:00 PM</span>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1 border-t border-white/10 pt-3">
+        <span className="text-[10px] uppercase tracking-[0.18em] text-white/60 sm:text-[11px]">
+          Sunday
+        </span>
+
+        <span className="text-white">
+          10:30 AM - 1:00 PM
+        </span>
+      </div>
+    </div>
+  }
+  icon={<FaClock size={22} />}
+/>
+
+
+
         <InfoCard
           title="Book an Appointment"
           subtitle="Schedule your visit"
           value=""
-          icon={<FaTooth size={22} />}
+          icon={<FaCalendarAlt size={22} />}
           center
         />
         <InfoCard
           title="Emergency Service"
           subtitle="EMERGENCY LINE 24/7"
-          value="1-990-888-777"
-          icon={<FaTooth size={22} />}
+          value="+91 62617 52771"
+          icon={<FaPhoneAlt size={22} />}
         />
       </div>
 
-      <section className="mt-24 relative z-40 min-h-screen bg-white pt-40 w-full">
+      <section id="About Us" className="mt-24 relative z-40 min-h-screen bg-white w-full">
         <Description />
+      </section>
+      <section id="Services"  className="relative z-40 min-h-screen bg-white  w-full">
+        <SmileTransformations />
+      </section>
+      <section className="relative z-40 min-h-screen bg-white  w-full">
+        <MembershipSection />
+      </section>
+      <section className="relative z-40 min-h-screen bg-white  w-full">
+        <ContactHighlight />
+      </section>
+      <section className="relative z-40  bg-white  w-full">
+        <Footer />
       </section>
     </div>
   );

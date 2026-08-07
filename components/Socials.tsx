@@ -6,6 +6,8 @@ import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
+  FaPhone,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 export default function Socials() {
@@ -15,18 +17,33 @@ export default function Socials() {
         
         {/* Left Info */}
         <div className="flex items-center gap-6 text-xs text-white/80">
-          <span className="hidden items-center gap-2 sm:flex">
-            <FaMapMarkerAlt className="text-sm" />
-            95 Brooklyn, New York 11213, US
-          </span>
+           <span className="hidden items-center gap-2 sm:flex">
+            <FaPhoneAlt className="text-sm" />
++91 62617 52771          </span>
+        <a
+  href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+338-D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden items-center gap-2 transition hover:text-[#56b5da] sm:flex"
+>
+  <FaMapMarkerAlt className="text-sm" />
+
+  <span>
+    Sector 338-D, Near Aakriti Greens Phase-2, Salaiya,
+    Bhopal, M.P, 462039
+  </span>
+</a>
+
 
           <a
             href="mailto:contact@smileyteeths.com"
             className="flex items-center gap-2 transition hover:text-white text-red-400"
           >
             <FaEnvelope className="text-sm" />
-            <span>contact@smileyteeths.com</span>
+            <span>dr.richaglobal@gmail.com</span>
           </a>
+
+         
         </div>
 
         {/* Social Icons */}

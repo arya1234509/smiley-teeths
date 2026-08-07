@@ -9,7 +9,7 @@ export default function InfoCard({
 }: {
   title: string;
   subtitle: string;
-  value: string;
+  value: string |  React.ReactNode;
   icon: React.ReactNode;
   center?: boolean;
 }) {
@@ -21,7 +21,9 @@ export default function InfoCard({
           {subtitle}
         </p>
         {value ? (
-          <div className="mt-2 text-[18px] font-semibold">{value}</div>
+<div className="mt-2 whitespace-pre-line text-[16px] font-semibold leading-6">
+  {value}
+</div>
         ) : (
           <div className="mt-4 inline-flex items-center gap-2 text-[13px] font-medium text-white/85">
             <span className="rounded-full bg-white/15 p-2">
