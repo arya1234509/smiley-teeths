@@ -1,4 +1,5 @@
-import React from "react";
+import Link from "next/link";
+import { useState } from "react";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -6,79 +7,152 @@ import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
-  FaPhone,
   FaPhoneAlt,
+  FaChevronDown,
 } from "react-icons/fa";
 
-export default function Socials() {
+interface SubCompProps {
+  topbarActive: boolean;
+  setTopbarActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Socials( {topbarActive,
+  setTopbarActive,
+}: SubCompProps) {
+
+    const handleToggle = () => {
+    setTopbarActive((prev) => !prev);
+  };
+
   return (
-    <div className="w-full bg-dark-blue">
-      <div className="mx-auto flex max-w-300 items-center justify-between px-5 py-2">
-        
-        {/* Left Info */}
-        <div className="flex items-center gap-6 text-xs text-white/80">
-           <span className="hidden items-center gap-2 sm:flex">
-            <FaPhoneAlt className="text-sm" />
-+91 62617 52771          </span>
-        <a
-  href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+338-D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hidden items-center gap-2 transition hover:text-[#56b5da] sm:flex"
->
-  <FaMapMarkerAlt className="text-sm" />
+    <div className="w-full z-40 bg-dark-blue text-white">
+      <div className="mx-auto px-5">
 
-  <span>
-    Sector 338-D, Near Aakriti Greens Phase-2, Salaiya,
-    Bhopal, M.P, 462039
-  </span>
-</a>
+        {/* Top Row */}
+        <div className="flex h-11 items-center justify-between">
 
-
-          <a
-            href="mailto:contact@smileyteeths.com"
-            className="flex items-center gap-2 transition hover:text-white text-red-400"
+          {/* Mobile Toggle */}
+          <button
+            onClick={handleToggle}
+            className="flex items-center gap-2 text-xs font-medium sm:hidden"
           >
-            <FaEnvelope className="text-sm" />
-            <span>dr.richaglobal@gmail.com</span>
-          </a>
+            Contact
+            <FaChevronDown
+              className={`transition-transform duration-300 ${
+                topbarActive ? "rotate-180" : ""
+              }`}
+            />
+          </button>
 
-         
+          {/* Desktop Contact */}
+          <div className="hidden items-center gap-6 text-xs text-white/80 sm:flex">
+
+            <Link
+              href="tel:+916261752771"
+              className="flex items-center gap-2 transition hover:text-[#56b5da]"
+            >
+              <FaPhoneAlt />
+              +91 62617 52771
+            </Link>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+337/D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 transition hover:text-[#56b5da]"
+            >
+              <FaMapMarkerAlt />
+              <span>
+                Sector 337/D, Near Aakriti Greens Phase-2, Salaiya
+              </span>
+            </a>
+
+            <a
+              href="mailto:dr.richaglobal@gmail.com"
+              className="flex items-center gap-2 transition hover:text-white text-brand-red"
+            >
+              <FaEnvelope />
+              dr.richaglobal@gmail.com
+            </a>
+
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
+
+            <a
+              href="#"
+              className="text-pink-500 transition hover:scale-110 hover:text-white"
+            >
+              <FaInstagram size={14} />
+            </a>
+
+            <a
+              href="#"
+              className="text-blue-400 transition hover:scale-110 hover:text-white"
+            >
+              <FaFacebookF size={14} />
+            </a>
+
+            <a
+              href="#"
+              className="text-cyan-400 transition hover:scale-110 hover:text-white"
+            >
+              <FaTwitter size={14} />
+            </a>
+
+            <a
+              href="#"
+              className="text-blue-500 transition hover:scale-110 hover:text-white"
+            >
+              <FaLinkedinIn size={14} />
+            </a>
+
+          </div>
         </div>
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-3 text-white">
-          <a
-            href="#"
-            aria-label="Instagram"
-            className="transition hover:text-white text-pink-500"
-          >
-            <FaInstagram size={14} />
-          </a>
+        {/* Mobile Dropdown */}
+        <div
+          className={`overflow-hidden transition-all duration-300 sm:hidden ${
+            topbarActive ? "max-h-64 py-4" : "max-h-0"
+          }`}
+        >
+          <div className="space-y-4 border-t border-white/10 pt-4 text-sm">
 
-          <a
-            href="#"
-            aria-label="Facebook"
-            className="transition hover:text-white text-blue-400"
-          >
-            <FaFacebookF  size={14} />
-          </a>
+            <Link
+              href="tel:+916261752771"
+              className="flex items-center gap-3"
+            >
+              <FaPhoneAlt className="text-[#56b5da]" />
+              +91 62617 52771
+            </Link>
 
-          <a
-            href="#"
-            aria-label="Twitter"
-            className="transition hover:text-white text-cyan-400"
-          >
-            <FaTwitter size={14} />
-          </a>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+337/D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3"
+            >
+              <FaMapMarkerAlt className="mt-1 shrink-0 text-[#56b5da]" />
 
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            className="transition hover:text-white text-blue-400"
-          >
-            <FaLinkedinIn size={14} />
-          </a>
+              <span>
+                Sector 337/D,
+                <br />
+                Near Aakriti Greens Phase-2,
+                <br />
+                Salaiya, Bhopal, M.P. 462039
+              </span>
+            </a>
+
+            <a
+              href="mailto:dr.richaglobal@gmail.com"
+              className="flex items-center gap-3"
+            >
+              <FaEnvelope className="text-[#56b5da]" />
+              dr.richaglobal@gmail.com
+            </a>
+
+          </div>
         </div>
 
       </div>

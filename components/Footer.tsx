@@ -150,14 +150,14 @@ export default function Footer() {
               <div className="flex gap-4">
                 <FaMapMarkerAlt className="mt-1 text-[#57c5e8]" />
   <a
-  href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+338-D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
+  href="https://www.google.com/maps/dir/?api=1&destination=Global+Dental,Sector+337/D,+Near+Aakriti+Greens+Phase-2,+Salaiya,+Bhopal,+M.P,+462039"
   target="_blank"
   rel="noopener noreferrer"
   className=" items-center gap-2 transition hover:text-[#56b5da] sm:flex"
 >
 
-                <p className="text-sm leading-6 text-white/60">
-                  Sector 338-D, 
+                <p className="hover:underline text-sm leading-6 text-white/60">
+                  Sector 337/D, 
                   <br />
                   Near Aakriti Greens Phase-2, Salaiya, 
                   <br />
@@ -170,13 +170,13 @@ export default function Footer() {
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="text-[#57c5e8]" />
 
-                <p className="text-sm text-white/60">
+                <Link href="tel:+916261752771" className="hover:underline text-sm text-white/60">
                   +91 62617 52771
-                </p>
+                </Link>
               </div>
 
 
-              <div className="flex items-center gap-4">
+              <div className="hover:underline flex items-center gap-4">
                 <FaEnvelope className="text-[#57c5e8]" />
 
                 <p className="text-sm text-white/60">

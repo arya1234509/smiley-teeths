@@ -9,6 +9,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-dark-blue: #121f38;
+  --color-brand-red: var(--color-red-400);
+  --color-brand-blue: #56b5da;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-jost: var(--font-jost);

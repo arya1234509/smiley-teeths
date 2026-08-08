@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 const images = [
   // "/background-home.jpg",
@@ -74,9 +76,73 @@ const [current, setCurrent] = useState(0);
           and infection control protocols for your complete peace of mind.
         </p>
 
-        <button className="my-8 rounded-[3px] cursor-pointer  bg-[#2ea3cc] px-8 py-3.5 text-[13px] font-semibold tracking-[0.12em] text-white shadow-md transition hover:bg-[#2496be]">
-          BOOK APPOINTMENT
-        </button>
+       <div className="my-8 flex flex-col gap-4 sm:flex-row ">
+  {/* Call */}
+  <Link
+    href="tel:+916261752771"
+    className="
+      inline-flex
+      flex-1
+      min-w-fit
+      whitespace-nowrap
+      items-center
+      justify-center
+      rounded-[3px]
+      border
+      border-[#2ea3cc]
+      bg-white
+      px-6
+      py-3.5
+      text-[13px]
+      font-semibold
+      tracking-[0.08em]
+      text-[#2ea3cc]
+      shadow-md
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:bg-[#2ea3cc]
+      hover:text-white
+      hover:shadow-lg
+    "
+  >
+    <FaPhoneAlt className="mr-2 shrink-0" />
+    BOOK APPOINTMENT VIA CALL
+  </Link>
+
+  {/* WhatsApp */}
+  <Link
+    href="https://wa.me/916261752771?text=Hello%20Global%20Dental%2C%20I%20would%20like%20to%20book%20a%20dentist%20appointment.%20Could%20you%20please%20share%20the%20available%20time%20slots%3F"
+    target="_blank"
+    className="
+      inline-flex
+      flex-1
+      min-w-fit
+      whitespace-nowrap
+      items-center
+      justify-center
+      rounded-[3px]
+      bg-[#25D366]
+      px-6
+      py-3.5
+      text-[13px]
+      font-semibold
+      tracking-[0.08em]
+      text-white
+      shadow-md
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:bg-[#1EBE5D]
+      hover:shadow-lg
+    "
+  >
+    <FaWhatsapp className="mr-2 shrink-0" />
+    BOOK VIA WHATSAPP
+  </Link>
+</div>
+
+
       </div>
     </div>
   );
