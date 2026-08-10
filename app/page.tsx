@@ -22,7 +22,7 @@ import Footer from "@/components/Footer";
 import GooglePatientsBadge from "@/components/GoogleBadge";
 import GoogleMembershipCard from "@/components/GoogleCard";
 
-const nav = ["HOME", "SERVICES", "DOCTORS", "BLOG", "CONTACT"];
+const nav = ["HOME", "SERVICES", "DOCTORS", "REVIEWS", "CONTACT"];
 
 const desktopImages = [
   "/images/owner-headshot.png",
@@ -223,7 +223,7 @@ export default function Home() {
               {nav.map((item, index) => (
                 <Link
                   key={item}
-                  href="#"
+                  href="#Faq"
                   className="
                     group
                     flex
@@ -520,7 +520,7 @@ className="
       {/* <section className="relative z-40 min-h-screen bg-white  w-full">
         <MembershipSection />
       </section> */}
-      <section className="relative z-40 min-h-screen bg-white  w-full">
+      <section id="Faq" className="relative z-40 min-h-screen bg-white  w-full">
         <ContactHighlight />
       </section>
       <section className="relative z-40  bg-white  w-full">

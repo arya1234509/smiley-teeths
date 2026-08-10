@@ -54,20 +54,140 @@ const highlights = [
 
 const reviews = [
   {
-    name: "Rahul Sharma",
-    designation: "Software Engineer",
+    name: "Sachin",
+    designation: "Samvidhan Live",
     phone: "+91 98XXXXXX21",
     text: "Amazing experience. The doctor explained everything clearly and the treatment was completely painless.",
     image: "/images/reviews/1.png",
     link: "https://maps.app.goo.gl/51ByG5hGYK28riJV7",
   },
   {
-    name: "Priya Verma",
+    name: "Manas Agarwal",
     designation: "Business Owner",
     phone: "+91 97XXXXXX45",
     text: "Very professional clinic with modern equipment. Highly recommended for family dental care.",
     image: "/images/reviews/2.png",
     link: "https://maps.app.goo.gl/rxsWZCmY5BGVm8z29",
+  },
+  {
+    name: "Sweta Singh",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 97XXXXXX67",
+    text: "Dr. Richa is a good dentist with great knowledge and experience.",
+    image: "/images/reviews/3.png",
+    link: "https://maps.app.goo.gl/ZbKhfTDJ26Kb1vCz6",
+  },
+  {
+    name: "Mayuri Agarwal",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 96XXXXXX58",
+    text: "Highly Recommended. She is an honest dentist who genuinely prioritises her patients health",
+    image: "/images/reviews/4.png",
+    link: "https://maps.app.goo.gl/jYQWrJA6MiZRMUkF9",
+  },
+  {
+    name: "Nidhi Bhalerao",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 97XXXXXX88",
+    text: "Excellent Braces Care & Guidance.",
+    image: "/images/reviews/5.png",
+    link: "https://maps.app.goo.gl/AsGciFQSat7SjATT9",
+  },
+  {
+    name: "Nirmesh Gupta",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 98XXXXXX46",
+    text: "A Doctor Who Truly Cares! Dr. Richa Took Follow-ups even after the Treatment",
+    image: "/images/reviews/6.png",
+    link: "https://maps.app.goo.gl/sQUA71w145smdpybA",
+  },
+  {
+    name: "Akshat Agarwal",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 98XXXXXX77",
+    text: "Not Just Treatment, The Right Treatment",
+    image: "/images/reviews/7.png",
+    link: "https://maps.app.goo.gl/qX53hxdGciqcSh1j9",
+  },
+  {
+    name: "Priyanka B.",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 96XXXXXX84",
+    text: "I have done my kids treatment here. She manages kids perfectly.",
+    image: "/images/reviews/8.png",
+    link: "https://maps.app.goo.gl/J6jLJYe8TX2Q6xTNA",
+  },
+  {
+    name: "Kavita Agrawal",
+    designation: "Happy Client. Happy Smile",
+    phone: "+91 95XXXXXX36",
+    text: "Very Humble and Hardworking. Dr. Richa Carries Perfection",
+    image: "/images/reviews/9.png",
+    link: "https://maps.app.goo.gl/L9fmF5RPsWmWE6nHA",
+  },
+  {
+    name: "CONFEREX SOLUTION",
+    designation: "Owner with a Happy Smile",
+    phone: "+91 96XXXXXX47",
+    text: "Where Expertise Meets Humility.",
+    image: "/images/reviews/10.png",
+    link: "https://maps.app.goo.gl/JyN6r2KYvYLm31MP8",
+  },
+  {
+    name: "Arpit Agrawal",
+    designation: "Happy Client. Happy Smile.",
+    phone: "+91 96XXXXXX57",
+    text: "Expert Knowledge, Proven Experience",
+    image: "/images/reviews/11.png",
+    link: "https://maps.app.goo.gl/noJ2SpQpM24Bg4W36",
+  },
+  {
+    name: "Anuradha Singh",
+    designation: "Happy Client. Happy Smile.",
+    phone: "+91 98XXXXXX67",
+    text: "wonderful experience.The dentist was incredible kind , friendly,and professional,which made me feel comfortable.",
+    image: "/images/reviews/12.png",
+    link: "https://maps.app.goo.gl/JbZ7VsGAkKMMvRdj9",
+  },
+  {
+    name: "Bhoomika Agrawal",
+    designation: "Happy Client. Happy Smile.",
+    phone: "+91 98XXXXXX58",
+    text: "Humble and Honest.",
+    image: "/images/reviews/13.png",
+    link: "https://maps.app.goo.gl/cBDArGLcENVX5k1aA",
+  },
+  {
+    name: "Sanjeev Nayak",
+    designation: "Happy Client. Happy Smile.",
+    phone: "+91 97XXXXXX38",
+    text: "I feel comfortable throughout the procedure. I highly recommend her.",
+    image: "/images/reviews/14.png",
+    link: "https://maps.app.goo.gl/hFSJs9hxy2zaL3iw6",
+  },
+  {
+    name: "Shivansh",
+    designation: "Happy Client. Happy Smile.",
+    phone: "+91 98XXXXXX37",
+    text: "Must Visit for Dental Problems.",
+    image: "/images/reviews/15.png",
+    link: "https://maps.app.goo.gl/8jMqmWuz4mmveBBL7",
+  },
+  {
+    name: "Rohit Gupta",
+    designation: "Happy Client. Happy Smile.",
+    phone: "+91 99XXXXXX77",
+    text: "5 Stars as Always.",
+    image: "/images/reviews/16.png",
+    link: "https://maps.app.goo.gl/kn8xPuqRqjqvbhiX6",
+  },
+  {
+    name: "All Customers",
+    designation: "Happy Clients. Happy Smiles.",
+    phone: "+91 99XXXXXX77",
+    text: "Overall Reviews Summary.",
+    image: "/images/reviews/17.png",
+    link: "https://www.google.com/maps/place/Global+Dental+Root+canal+and+Implant+centre/@23.1630734,77.4474187,17z/data=!4m8!3m7!1s0x397c4300584e814f:0x5c3f860cc70bf199!8m2!3d23.1630685!4d77.4499936!9m1!1b1!16s%2Fg%2F11myx_v49p?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -100,7 +220,8 @@ export default function ContactHighlight() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [active, setActive] = useState(0);
   const [main, setMain] = useState<ViewKey>("map");
-
+const imageIndex = active % images.length;
+const reviewIndex = active % reviews.length;
 const pip: ViewKey = main === "map" ? "street" : "map";
 
 const swap = () => {
@@ -108,12 +229,12 @@ const swap = () => {
 };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % images.length);
-    }, 3500);
+  const interval = setInterval(() => {
+    setActive((prev) => prev + 1);
+  }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  return () => clearInterval(interval);
+}, []);
   return (
     <section className="bg-[#f7f9fd] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
@@ -187,7 +308,7 @@ const swap = () => {
                   fill
                   // sizes="(max-width: 1024px) 100vw, 33vw"
                   className={`object-cover transition-all duration-700 ${
-                    active === index
+                    imageIndex === index
                       ? "scale-100 opacity-100"
                       : "scale-105 opacity-0"
                   }`}
@@ -203,7 +324,7 @@ const swap = () => {
                   onClick={() => setActive(index)}
                   aria-label={`Show image ${index + 1}`}
                   className={`h-2.5 rounded-full transition-all duration-300 ${
-                    active === index
+                    imageIndex === index
                       ? "w-8 bg-[#2ea3cc]"
                       : "w-2.5 bg-slate-300 hover:bg-slate-400"
                   }`}
@@ -237,7 +358,7 @@ const swap = () => {
           absolute inset-0 flex flex-col p-6
           transition-all duration-700
           ${
-            active === index
+            reviewIndex === index
               ? "translate-y-0 opacity-100"
               : "translate-y-5 opacity-0"
           }
@@ -316,7 +437,7 @@ const swap = () => {
                       className="
               h-full
               w-full
-              object-cover
+              object-contain
             "
                     />
                   </div>
@@ -360,7 +481,7 @@ const swap = () => {
           transition-all
           duration-300
           ${
-            active === index
+            reviewIndex === index
               ? "h-2.5 w-8 bg-[#2ea3cc]"
               : "h-2.5 w-2.5 bg-slate-300 hover:bg-slate-400"
           }
