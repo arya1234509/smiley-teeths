@@ -48,7 +48,7 @@ export default function Socials( {topbarActive,
           <div className="hidden items-center gap-6 text-xs text-white/80 sm:flex">
 
             <Link
-              href="tel:++918107047722"
+              href="tel:+918107047722"
               className="flex items-center gap-2 transition hover:text-[#56b5da]"
             >
               <FaPhoneAlt />
