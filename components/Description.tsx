@@ -115,7 +115,7 @@ const [current, setCurrent] = useState(0);
 
   {/* WhatsApp */}
   <Link
-    href="https://wa.me/91810704?text=Hello%20Global%20Dental%2C%20I%20would%20like%20to%20book%20a%20dentist%20appointment.%20Could%20you%20please%20share%20the%20available%20time%20slots%3F"
+    href="https://wa.me/918107047722?text=Hello%20Global%20Dental%2C%20I%20would%20like%20to%20book%20a%20dentist%20appointment.%20Could%20you%20please%20share%20the%20available%20time%20slots%3F"
     target="_blank"
     className="
       inline-flex
